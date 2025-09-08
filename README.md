@@ -1,4 +1,4 @@
-# Authenticated Remote Code Execution in WonderCMS 3.5.0
+# CVE-2025-57055: Authenticated Remote Code Execution in WonderCMS 3.5.0
 
 ## Vulnerability Mechanics
 
@@ -17,7 +17,8 @@ This behavior introduces RCE risk due to:
 ## Vendor Response
 
 - The vulnerability was reported to WonderCMS maintainers in July 2025.
-- The vendor acknowledged the report but **declined to classify it as a vulnerability**, citing the need for admin access.
+
+- The maintainers acknowledged the report but noted that, in their view, this behavior is acceptable for administrators.
 
 ## Mitigation Guidance
 
