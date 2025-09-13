@@ -14,6 +14,25 @@ This behavior introduces RCE risk due to:
 
 **Note:** Admin authentication is required, but default installations expose the admin password publicly (on the homepage), use password-only login, and do not enforce strong auth controls.
 
+## Acceptance criteria for remote module/theme descriptors
+
+WonderCMS will accept and attempt to install remote modules/themes if the submitted JSON descriptor matches the expected `wcms-modules.json` format. A descriptor that passes the format check (and points to a ZIP archive) will be fetched and its archive contents extracted into a web-accessible directory (e.g., `/themes/<name>/`) without further validation of file types.
+
+**Example descriptor :**
+```json
+{
+  "themes": {
+    "SSRF": {
+      "name": "FAKE",
+      "repo": "https://example.com/",
+      "zip": "https://example.com/safe.zip",
+      "summary": "test",
+      "version": "1.0.0",
+      "image": "https://example.com/fake.png"
+    }
+  }
+}
+```
 ## Vendor Response
 
 - The vulnerability was reported to WonderCMS maintainers in July 2025.
