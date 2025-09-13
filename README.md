@@ -33,6 +33,28 @@ WonderCMS will accept and attempt to install remote modules/themes if the submit
   }
 }
 ```
+
+### Proof of Concept (PoC)
+1. Obtain the admin password from the publicly exposed homepage of a default WonderCMS installation.
+
+2. Log in to the admin panel.
+
+3. Navigate to the theme installation section.
+
+4. Provide the URL to a malicious JSON descriptor (e.g., hosted on an attacker-controlled server).
+
+5. Initiate installation. The server will:
+
+- Fetch the descriptor.
+- Download the specified ZIP archive.
+
+6. Install the downloaded malicious theme.
+
+7. Access the extracted PHP shell (e.g., http://target.com/themes/<Theme_Name>/shell.php) to execute arbitrary commands.
+
+
+
+
 ## Vendor Response
 
 - The vulnerability was reported to WonderCMS maintainers in July 2025.
