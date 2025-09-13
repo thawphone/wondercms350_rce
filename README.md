@@ -35,6 +35,7 @@ WonderCMS will accept and attempt to install remote modules/themes if the submit
 ```
 
 ### Proof of Concept (PoC)
+**Warning: Do not run on production systems. Only use authorized test environments.**
 1. Obtain the admin password from the publicly exposed homepage of a default WonderCMS installation.
 
 2. Log in to the admin panel.
@@ -51,6 +52,8 @@ WonderCMS will accept and attempt to install remote modules/themes if the submit
 6. Install the downloaded malicious theme.
 
 7. Access the extracted PHP shell (e.g., http://target.com/themes/<Theme_Name>/shell.php) to execute arbitrary commands.
+
+(**Note:** Only perform these steps in a controlled test environment. Exploiting this vulnerability on live systems without authorization is illegal.)
 
 
 
