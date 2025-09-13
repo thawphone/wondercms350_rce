@@ -25,7 +25,7 @@ WonderCMS will accept and attempt to install remote modules/themes if the submit
     "SSRF": {
       "name": "FAKE",
       "repo": "https://example.com/",
-      "zip": "https://example.com/safe.zip",
+      "zip": "https://example.com/evil.zip",
       "summary": "test",
       "version": "1.0.0",
       "image": "https://example.com/fake.png"
